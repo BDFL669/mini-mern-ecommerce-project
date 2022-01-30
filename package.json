@@ -2,8 +2,9 @@
   "name": "mern-shoppingcart-redux",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
+	"heroku-postbuild": "cd client && npm install && npm install --only=dev --noshrinkwrap && npm run build",
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
@@ -14,9 +15,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
-    "mongoose": "^5.11.8"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.8",
+    "nodemailer": "^6.4.17",
+    "react-stripe-checkout": "^2.6.3",
+    "react-toastify": "^8.1.0",
+    "stripe": "^8.201.0",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.12"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
